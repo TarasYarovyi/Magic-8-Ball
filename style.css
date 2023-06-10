@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Monserrat", sans-serif;
+    background-image: linear-gradient(315deg, #4741f2 0%, #90d1f9, 75%);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 600px;
+}
