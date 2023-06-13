@@ -49,10 +49,11 @@ body{
 
 }
 
-.question-area h2 {
+.question-area label {
     margin-bottom: 10px;
     font-size: 36px;
     text-transform: uppercase;
+  
 }
 
 .question-area input {
