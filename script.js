@@ -33,15 +33,17 @@ function checkQuestion() {
   ball.classList.add("shake-animation");
   setTimeout(() => {
     ball.classList.remove("shake-animation");
+    const question = input.value;
+    const reg = /[\w+[\w+|\s+]+\?/;
 
-    answer.textContent = getRandom(answers);
+    if (reg.test(question)) {
+      answer.textContent = getRandom(answers);
+    } else {
+      error.textContent = "Please ask your question correctly";
+    }
   }, 1000);
 }
 
 function getRandom(list) {
   return list[Math.floor(Math.random() * list.length)];
-}
-
-function showAnswer() {
-  answer.textContent = getRandom(list);
 }
