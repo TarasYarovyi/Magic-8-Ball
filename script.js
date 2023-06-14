@@ -30,9 +30,18 @@ const answers = [
 ball.addEventListener("click", checkQuestion);
 
 function checkQuestion() {
-  ball.classList.toggle("shake-animation");
+  ball.classList.add("shake-animation");
+  setTimeout(() => {
+    ball.classList.remove("shake-animation");
+
+    answer.textContent = getRandom(answers);
+  }, 1000);
 }
 
 function getRandom(list) {
   return list[Math.floor(Math.random() * list.length)];
+}
+
+function showAnswer() {
+  answer.textContent = getRandom(list);
 }
