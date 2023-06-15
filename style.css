@@ -65,6 +65,8 @@ body{
 }
 
 .question-area .answer {
+    display: none;
+    opacity: 1;
     margin-top: 30px;
     color: #bbe6fd;
     
@@ -75,8 +77,11 @@ body{
 }
 
 .question-area .error {
+    display: none;
+    opacity: 1;
     font-weight: bold;
     color: #a42cb4;
+    
 }
 
 .shake-animation {
@@ -104,3 +109,9 @@ body{
     
 }
 
+
+.show {
+    /* transition: opacity 200ms, display 200ms; */
+    display: block;
+    opacity: 1;
+  }

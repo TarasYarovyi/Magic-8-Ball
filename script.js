@@ -38,8 +38,18 @@ function checkQuestion() {
 
     if (reg.test(question)) {
       answer.textContent = getRandom(answers);
+      answer.classList.add("show");
+      error.classList.remove("show");
+      console.log(answer.className);
+      console.log(error.className);
+      //   answer.style.display = "block";
+      //   error.style.display = "none";
     } else {
       error.textContent = "Please ask your question correctly";
+      answer.classList.remove("show");
+      error.classList.add("show");
+      console.log(answer.className);
+      console.log(error.className);
     }
   }, 1000);
 }
