@@ -30,26 +30,22 @@ const answers = [
 ball.addEventListener("click", checkQuestion);
 
 function checkQuestion() {
-  ball.classList.add("shake-animation");
+  ball.classList.add("shake");
   setTimeout(() => {
-    ball.classList.remove("shake-animation");
+    ball.classList.remove("shake");
     const question = input.value;
     const reg = /[\w+[\w+|\s+]+\?/;
 
     if (reg.test(question)) {
+      error.style.display = "none";
+      error.classList.remove("show");
       answer.textContent = getRandom(answers);
       answer.classList.add("show");
-      error.classList.remove("show");
-      console.log(answer.className);
-      console.log(error.className);
-      //   answer.style.display = "block";
-      //   error.style.display = "none";
     } else {
-      error.textContent = "Please ask your question correctly";
+      answer.style.display = "none";
       answer.classList.remove("show");
+      error.textContent = "Please ask your question correctly";
       error.classList.add("show");
-      console.log(answer.className);
-      console.log(error.className);
     }
   }, 1000);
 }

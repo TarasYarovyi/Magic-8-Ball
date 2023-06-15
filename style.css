@@ -65,10 +65,10 @@ body{
 }
 
 .question-area .answer {
-    display: none;
-    opacity: 1;
+   
     margin-top: 30px;
     color: #bbe6fd;
+    
     
 }
 
@@ -77,15 +77,15 @@ body{
 }
 
 .question-area .error {
-    display: none;
-    opacity: 1;
+    
     font-weight: bold;
     color: #a42cb4;
     
+    
 }
 
-.shake-animation {
-    animation: shake 1s 1; 
+.shake {
+    animation: shake 1s ; 
 }
 @keyframes shake {
     0% {
@@ -109,9 +109,16 @@ body{
     
 }
 
-
-.show {
-    /* transition: opacity 200ms, display 200ms; */
-    display: block;
-    opacity: 1;
-  }
+.show{
+    animation: show 10s;
+}
+@keyframes show {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
