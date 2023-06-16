@@ -31,16 +31,12 @@ ball.addEventListener("click", checkQuestion);
 
 function checkQuestion() {
   ball.style.animation = "shake 1s";
-
-  const question = input.value;
-  const reg = /[\w+[\w+|\s+]+\?/;
-
   answer.style.display = "";
   error.style.display = "";
-  answer.style.animation = "";
-  error.style.animation = "";
 
-  if (reg.test(question)) {
+  const reg = /[\w+[\w+|\s+]+\?/;
+
+  if (reg.test(input.value)) {
     answer.textContent = getRandom(answers);
     answer.style.animation = "show 3s";
     error.style.display = "none";
