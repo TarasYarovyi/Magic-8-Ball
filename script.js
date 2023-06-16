@@ -42,18 +42,18 @@ function checkQuestion() {
 
   if (reg.test(question)) {
     answer.textContent = getRandom(answers);
-    answer.style.animation = "show 5s";
+    answer.style.animation = "show 3s";
     error.style.display = "none";
   } else {
     error.textContent = "Please ask your question correctly";
-    error.style.animation = "show 5s";
+    error.style.animation = "show 3s";
     answer.style.display = "none";
   }
   setTimeout(() => {
     ball.style.animation = "";
     answer.style.animation = "";
     error.style.animation = "";
-  }, 5000);
+  }, 3000);
 }
 
 function getRandom(list) {
