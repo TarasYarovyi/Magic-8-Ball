@@ -65,28 +65,18 @@ body{
 }
 
 .question-area .answer {
-   
     margin-top: 30px;
     color: #bbe6fd;
-    
-    
-}
-
-.question-area .answer span {
-    font-weight: bold;
 }
 
 .question-area .error {
-    
+    margin-top: 30px;
     font-weight: bold;
     color: #a42cb4;
     
     
 }
 
-.shake {
-    animation: shake 1s ; 
-}
 @keyframes shake {
     0% {
         left: 290px;
@@ -109,9 +99,7 @@ body{
     
 }
 
-.show{
-    animation: show 10s;
-}
+
 @keyframes show {
     0% {
         display: none;
@@ -120,5 +108,16 @@ body{
     100% {
         display: block;
         opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        display: block;
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
     }
 }

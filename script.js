@@ -30,24 +30,30 @@ const answers = [
 ball.addEventListener("click", checkQuestion);
 
 function checkQuestion() {
-  ball.classList.add("shake");
-  setTimeout(() => {
-    ball.classList.remove("shake");
-    const question = input.value;
-    const reg = /[\w+[\w+|\s+]+\?/;
+  ball.style.animation = "shake 1s";
 
-    if (reg.test(question)) {
-      error.style.display = "none";
-      error.classList.remove("show");
-      answer.textContent = getRandom(answers);
-      answer.classList.add("show");
-    } else {
-      answer.style.display = "none";
-      answer.classList.remove("show");
-      error.textContent = "Please ask your question correctly";
-      error.classList.add("show");
-    }
-  }, 1000);
+  const question = input.value;
+  const reg = /[\w+[\w+|\s+]+\?/;
+
+  answer.style.display = "";
+  error.style.display = "";
+  answer.style.animation = "";
+  error.style.animation = "";
+
+  if (reg.test(question)) {
+    answer.textContent = getRandom(answers);
+    answer.style.animation = "show 5s";
+    error.style.display = "none";
+  } else {
+    error.textContent = "Please ask your question correctly";
+    error.style.animation = "show 5s";
+    answer.style.display = "none";
+  }
+  setTimeout(() => {
+    ball.style.animation = "";
+    answer.style.animation = "";
+    error.style.animation = "";
+  }, 5000);
 }
 
 function getRandom(list) {
